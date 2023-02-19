@@ -7,8 +7,9 @@ import org.springframework.stereotype.Component;
 @Component
 /*	Tambien con Service en lugar de Component
 @Service*/
-public class MiServicio {
+public class MiServicio  implements InterfazServicio{
 	
+	@Override
 	public String operacion() {
 		return "Ejecutando algun proceso importante..";
 	}

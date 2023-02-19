@@ -4,16 +4,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import com.bolsadeideas.springboot.inyecciondependencias.app.models.service.MiServicio;
+
+import com.bolsadeideas.springboot.inyecciondependencias.app.models.service.InterfazServicio;/*
+import com.bolsadeideas.springboot.inyecciondependencias.app.models.service.MiServicio;*/
 
 @Controller
 public class IndexController {
 	
 	/*	Instanciando MiServicio como Atributo
 	private MiServicio servicio = new MiServicio();*/
-	//	Inyectando el objeto con @Autowired
+	
+	/*	Inyectando el objeto con @Autowired
 	@Autowired
-	private MiServicio servicio;
+	private MiServicio servicio;*/
+	
+	//	Inyectando mediante la Interfaz con @Autowired
+	@Autowired
+	private InterfazServicio servicio;
 	
 	//	Metodos handler de controlador (siempre publicos)
 	@GetMapping({"", "/", "/index"})
