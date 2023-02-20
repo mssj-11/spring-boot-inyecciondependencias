@@ -4,7 +4,7 @@ package com.bolsadeideas.springboot.inyecciondependencias.app.models.service;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-//	Agregando MiServicio como un componente de Spring para poder realizar Inyeccion de dependencias
+//	Agregando MiServicioComp como un componente de Spring para poder realizar Inyeccion de dependencias
 @Component("miServicioComp")
 @Primary	//	Clase en ejecucion por defecto
 /*	Tambien con Service en lugar de Component
