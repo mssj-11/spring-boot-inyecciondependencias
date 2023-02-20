@@ -1,12 +1,11 @@
 //	Es necesario que esten dentro del mismo paquete, en este caso: (package com.bolsadeideas.springboot.inyecciondependencias.app)
 package com.bolsadeideas.springboot.inyecciondependencias.app.models.service;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 //	Agregando MiServicioComp como un componente de Spring para poder realizar Inyeccion de dependencias
 @Component("miServicioComp")
-@Primary	//	Clase en ejecucion por defecto
+//@Primary	//	Clase en ejecucion por defecto
 /*	Tambien con Service en lugar de Component
 @Service*/
 public class MiServicioComp  implements InterfazServicio{

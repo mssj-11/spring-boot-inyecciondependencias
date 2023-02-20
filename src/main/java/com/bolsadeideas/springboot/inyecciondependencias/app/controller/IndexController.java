@@ -1,6 +1,7 @@
 package com.bolsadeideas.springboot.inyecciondependencias.app.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,6 +21,7 @@ public class IndexController {
 	
 	//	Inyectando mediante la Interfaz con @Autowired
 	@Autowired
+	@Qualifier("miServicioComp")	//	Inyeccion del componente mediante su nombre
 	private InterfazServicio servicio;
 	
 	/*	Inyectar via  Constructor
