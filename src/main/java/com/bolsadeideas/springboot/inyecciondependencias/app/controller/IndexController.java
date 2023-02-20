@@ -22,6 +22,14 @@ public class IndexController {
 	@Autowired
 	private InterfazServicio servicio;
 	
+	/*	Inyectar via  Constructor
+	@Autowired
+	public IndexController(InterfazServicio servicio) {
+		this.servicio = servicio;
+	}*/
+
+
+
 	//	Metodos handler de controlador (siempre publicos)
 	@GetMapping({"", "/", "/index"})
 	public String index(Model model) {
@@ -29,6 +37,14 @@ public class IndexController {
 		
 		return "index";
 	}
+	
+	
+	
+	/*	Inyectar via Metodo Set
+	@Autowired
+	public void setServicio(InterfazServicio servicio) {
+		this.servicio = servicio;
+	}*/
 	
 	
 	
