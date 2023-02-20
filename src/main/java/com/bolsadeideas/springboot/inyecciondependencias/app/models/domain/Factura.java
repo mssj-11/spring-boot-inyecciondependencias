@@ -11,11 +11,13 @@ public class Factura {
 	
 	//	Atributos de una Factura
 //	Inyectando nombre y apellido en un Property
-	@Value("${descripcion.factura}")
+	@Value("${factura.descripcion}")
 	private String descripcion;
 	
-	@Autowired()	//	Inyectando el Cliente
+	@Autowired	//	Inyectando el Cliente
 	private Cliente cliente;	//	Relacion con Cliente
+	
+	@Autowired	//	Inyectando la lista de ItemFactura
 	private List<ItemFactura> items;	//	Lista de items
 	
 	

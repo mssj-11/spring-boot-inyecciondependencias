@@ -7,6 +7,12 @@ public class ItemFactura {
 	private Integer cantidad;
 	
 	
+	//	Constructor
+	public ItemFactura(Producto producto, Integer cantidad) {
+		this.producto = producto;
+		this.cantidad = cantidad;
+	}
+	
 	
 	//	Setter & Getter
 	public Producto getProducto() {
