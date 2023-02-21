@@ -3,6 +3,7 @@ package com.bolsadeideas.springboot.inyecciondependencias.app.models.domain;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -18,6 +19,7 @@ public class Factura {
 	private Cliente cliente;	//	Relacion con Cliente
 	
 	@Autowired	//	Inyectando la lista de ItemFactura
+	@Qualifier("itemsFacturaOficina")	//	Inyectar mediante @Qualifier
 	private List<ItemFactura> items;	//	Lista de items
 	
 	

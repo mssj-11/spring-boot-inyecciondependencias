@@ -56,5 +56,27 @@ public class AppConfig {
 	
 	
 	
+	//	Items de Factura Oficina
+	@Bean("itemsFacturaOficina")
+	//@Primary
+	public List<ItemFactura> registrarItemsOficina(){
+		//	Objetos producto
+		Producto producto1 = new Producto("PC Alienware", 300);
+		Producto producto2 = new Producto("Tablet", 200);
+		Producto producto3 = new Producto("Impresora HP", 230);
+		Producto producto4 = new Producto("PC Huawei", 280);
+		
+		ItemFactura lineal1 = new ItemFactura(producto1, 9);
+		ItemFactura lineal2 = new ItemFactura(producto2, 5);
+		ItemFactura lineal3 = new ItemFactura(producto3, 15);
+		ItemFactura lineal4 = new ItemFactura(producto4, 10);
+		
+		//	Retornando el ArrayList
+		return Arrays.asList(lineal1, lineal2, lineal3, lineal4);
+	}
+	
+	
+	
+	
 	
 }
