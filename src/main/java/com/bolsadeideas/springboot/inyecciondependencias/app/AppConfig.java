@@ -37,7 +37,6 @@ public class AppConfig {
 	
 	
 	
-	
 	//	Ejemplo de Factura y Relacion
 	//	Items de Factura
 	@Bean("itemsFactura")

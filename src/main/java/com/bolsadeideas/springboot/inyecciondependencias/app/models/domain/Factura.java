@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+
 @Component
 public class Factura {
 	
@@ -21,6 +24,26 @@ public class Factura {
 	@Autowired	//	Inyectando la lista de ItemFactura
 	@Qualifier("itemsFacturaOficina")	//	Inyectar mediante @Qualifier
 	private List<ItemFactura> items;	//	Lista de items
+	
+	
+	
+	//	Ciclo de vida del componente
+	@PostConstruct
+	public void Inicializar() {
+		//	Accediendo a los Atributos
+		cliente.setNombre(cliente.getNombre().concat(" ").concat("Mario"));	//	Concatenamos
+		descripcion = descripcion.concat(" del Cliente: ").concat(cliente.getNombre());
+	}
+	//	Otro ejemplo
+	@PreDestroy
+	public void desctriur() {
+		//	Visualizacion por consola una vez terminada la ejecucion
+		System.out.println("Factura destruida: " .concat(descripcion));
+	}
+	
+	
+	
+	
 	
 	
 	
