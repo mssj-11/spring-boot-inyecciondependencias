@@ -1,18 +1,28 @@
 package com.bolsadeideas.springboot.inyecciondependencias.app.models.domain;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
 @Component
-public class Factura {
+@RequestScope	//	Hara que los valores sean diferentes por cada actualiz<acion
+//@SessionScope	//	Marcar Objetos como sesiones a manera de serializacion
+//@AplicationScope
+public class Factura implements Serializable{	//	Sesiones HTTP
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7997093234885562189L;
+
 	//	Atributos de una Factura
 //	Inyectando nombre y apellido en un Property
 	@Value("${factura.descripcion}")
