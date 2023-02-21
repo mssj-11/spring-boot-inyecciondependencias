@@ -14,6 +14,7 @@ public class ItemFactura {
 	}
 	
 	
+	
 	//	Setter & Getter
 	public Producto getProducto() {
 		return producto;
@@ -31,5 +32,10 @@ public class ItemFactura {
 	}
 	
 	
+	
+	//	Metodo TOTAL
+	public Integer calcularImporte() {
+		return producto.getPrecio() * cantidad;
+	}
 
 }
