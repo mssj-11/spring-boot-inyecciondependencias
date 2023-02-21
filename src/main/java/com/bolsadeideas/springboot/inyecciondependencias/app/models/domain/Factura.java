@@ -31,7 +31,7 @@ public class Factura {
 	@PostConstruct
 	public void Inicializar() {
 		//	Accediendo a los Atributos
-		cliente.setNombre(cliente.getNombre().concat(" ").concat("Mario"));	//	Concatenamos
+		cliente.setNombre(cliente.getNombre().concat(" ").concat("Mario"));	//	Concatenacion
 		descripcion = descripcion.concat(" del Cliente: ").concat(cliente.getNombre());
 	}
 	//	Otro ejemplo
